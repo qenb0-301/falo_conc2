@@ -121,23 +121,36 @@
   </header>
 
   <main>
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero section--soft" aria-labelledby="hero-title">
       <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Закрытое премиальное пространство</p>
+        <div class="hero-copy reveal">
+          <span class="lux-pill">Закрытое премиальное пространство</span>
           <h1 id="hero-title">Фаллопротезирование. Конфиденциально. Премиальный уровень специалистов.</h1>
           <p class="lead">Коалиция отобранных врачей в разных городах. Сертифицированные американские импланты. Общение без лишних вопросов.</p>
           <ul class="hero-highlights">
             <li>
-              <span class="icon-circle">◎</span>
+              <span class="icon-circle" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.4"/>
+                </svg>
+              </span>
               Конфиденциальность обращения
             </li>
             <li>
-              <span class="icon-circle">◎</span>
+              <span class="icon-circle" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 7H11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                  <path d="M7 3V11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+                </svg>
+              </span>
               Отбор врачей и опыт
             </li>
             <li>
-              <span class="icon-circle">◎</span>
+              <span class="icon-circle" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 7.5L5.5 10.5L11.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
               Сертифицированные импланты (США)
             </li>
           </ul>
@@ -146,7 +159,7 @@
             <p class="micro">Без формы. Без звонков. По вашему темпу.</p>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual reveal" aria-hidden="true">
           <div class="glow"></div>
           <div class="hero-card">
             <p class="hero-card-title">100% конфиденциальность обращения</p>
@@ -160,25 +173,29 @@
 
     <section class="section" id="approach" aria-labelledby="approach-title">
       <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">Приватный подход</p>
+        <div class="section-header reveal">
+          <span class="lux-pill">Приватный подход</span>
           <h2 id="approach-title">Сервис, который уважает личную тему.</h2>
           <p class="muted">Спокойный процесс без давления и лишних данных.</p>
         </div>
         <div class="grid cards-4">
-          <article class="card">
+          <article class="card reveal">
+            <div class="card-graphic" aria-hidden="true">01</div>
             <h3>Без лишних данных</h3>
             <p>Мы бережём информацию и не просим лишнего.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <div class="card-graphic" aria-hidden="true">02</div>
             <h3>По вашему темпу</h3>
             <p>Вы решаете, когда и сколько обсуждать.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <div class="card-graphic" aria-hidden="true">03</div>
             <h3>Можно без звонков</h3>
             <p>Можно написать без звонков и без лишних данных.</p>
           </article>
-          <article class="card">
+          <article class="card reveal">
+            <div class="card-graphic" aria-hidden="true">04</div>
             <h3>Выбор врача и города</h3>
             <p>Решение остаётся за вами.</p>
           </article>
@@ -186,36 +203,36 @@
       </div>
     </section>
 
-    <section class="section" id="implants" aria-labelledby="implants-title">
+    <section class="section section--soft" id="implants" aria-labelledby="implants-title">
       <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">Импланты</p>
+        <div class="section-header reveal">
+          <span class="lux-pill">Импланты</span>
           <h2 id="implants-title">Импланты американского бренда <span id="brand-name">BRAND_NAME</span></h2>
           <p class="muted">Сертифицированные модели с контролируемыми стандартами качества. Подбор — исключительно индивидуальный.</p>
         </div>
         <div class="implant-grid">
-          <div class="implant-visual">
+          <div class="implant-visual reveal">
             <img src="assets/implant-placeholder.svg" alt="Нейтральный рендер импланта" loading="lazy" />
             <p class="implant-note">Подбор модели — индивидуален и определяется врачом.</p>
           </div>
           <div class="implant-cards" id="implant-cards"></div>
         </div>
         <div class="steps">
-          <div class="step">
+          <div class="step reveal">
             <div class="step-icon" aria-hidden="true">1</div>
             <div>
               <h3>Контроль</h3>
               <p>Управляемость без лишних деталей.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step reveal">
             <div class="step-icon" aria-hidden="true">2</div>
             <div>
               <h3>Естественное состояние</h3>
               <p>Нейтральная схема без натурализма.</p>
             </div>
           </div>
-          <div class="step">
+          <div class="step reveal">
             <div class="step-icon" aria-hidden="true">3</div>
             <div>
               <h3>Надёжность конструкции</h3>
@@ -228,12 +245,12 @@
 
     <section class="section" id="doctors" aria-labelledby="doctors-title">
       <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">Врачи</p>
+        <div class="section-header reveal">
+          <span class="lux-pill">Врачи</span>
           <h2 id="doctors-title">Отобранные специалисты в разных городах.</h2>
           <p class="muted">Врачи — главный фактор доверия и выбора. Подход один, стандарты едины.</p>
         </div>
-        <div class="filters">
+        <div class="filters reveal">
           <label class="select">
             <span class="select-label">Город</span>
             <select id="city-filter" aria-label="Фильтр по городу"></select>
@@ -248,10 +265,10 @@
       </div>
     </section>
 
-    <section class="section privacy" id="privacy" aria-labelledby="privacy-title">
+    <section class="section privacy section--soft" id="privacy" aria-labelledby="privacy-title">
       <div class="container privacy-panel">
         <div>
-          <p class="eyebrow">Конфиденциальность</p>
+          <span class="lux-pill">Конфиденциальность</span>
           <h2 id="privacy-title">Конфиденциальность обращения</h2>
           <p class="muted">Тихий канал связи, без давления и без публичности.</p>
           <ul class="privacy-list">
@@ -268,12 +285,12 @@
 
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
-        <div class="section-header">
-          <p class="eyebrow">FAQ</p>
+        <div class="section-header reveal">
+          <span class="lux-pill">FAQ</span>
           <h2 id="faq-title">Коротко и по делу.</h2>
         </div>
         <div class="accordion" id="faq-accordion">
-          <div class="accordion-item">
+          <div class="accordion-item reveal">
             <button class="accordion-trigger" aria-expanded="false">
               Как выбрать врача?
               <span aria-hidden="true">+</span>
@@ -282,7 +299,7 @@
               <p>Выберите город, сравните опыт и регалии. Менеджер поможет сверить детали.</p>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item reveal">
             <button class="accordion-trigger" aria-expanded="false">
               Нужно ли звонить?
               <span aria-hidden="true">+</span>
@@ -291,7 +308,7 @@
               <p>Нет. Можно написать без звонков и без лишних данных.</p>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item reveal">
             <button class="accordion-trigger" aria-expanded="false">
               Можно ли узнать всё в переписке?
               <span aria-hidden="true">+</span>
@@ -300,7 +317,7 @@
               <p>Да, мы объясним ключевые этапы и условия через чат.</p>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item reveal">
             <button class="accordion-trigger" aria-expanded="false">
               Какие импланты используются?
               <span aria-hidden="true">+</span>
@@ -309,7 +326,7 @@
               <p>Используются сертифицированные импланты американского бренда. Подбор индивидуален.</p>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item reveal">
             <button class="accordion-trigger" aria-expanded="false">
               Сколько времени занимает путь?
               <span aria-hidden="true">+</span>
@@ -318,7 +335,7 @@
               <p>Сроки зависят от медицинской ситуации и графика врача.</p>
             </div>
           </div>
-          <div class="accordion-item">
+          <div class="accordion-item reveal">
             <button class="accordion-trigger" aria-expanded="false">
               Что делать, если я из другого региона?
               <span aria-hidden="true">+</span>
@@ -331,11 +348,11 @@
       </div>
     </section>
 
-    <section class="section" id="contact" aria-labelledby="contact-title">
+    <section class="section section--soft" id="contact" aria-labelledby="contact-title">
       <div class="container">
-        <div class="cta-card">
+        <div class="cta-card reveal">
           <div>
-            <p class="eyebrow">Контакт</p>
+            <span class="lux-pill">Контакт</span>
             <h2 id="contact-title">Получить информацию конфиденциально</h2>
             <p class="muted">Напишите в WhatsApp. Менеджер уточнит только необходимое и поможет выбрать врача и город.</p>
           </div>

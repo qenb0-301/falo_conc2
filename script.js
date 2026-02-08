@@ -102,7 +102,7 @@ const buildWhatsAppLink = ({ city, doctorName } = {}) => {
 const renderImplants = () => {
   implantCards.innerHTML = MODELS.map(
     (model) => `
-      <article class="implant-card">
+      <article class="implant-card reveal">
         <h3>${model.name}</h3>
         <ul class="implant-features">
           ${model.features.map((feature) => `<li>${feature}</li>`).join("")}
@@ -137,7 +137,7 @@ const renderDoctors = () => {
   doctorGrid.innerHTML = filtered
     .map(
       (doctor) => `
-      <article class="doctor-card">
+      <article class="doctor-card reveal">
         <div class="doctor-header">
           <img class="doctor-photo" src="${doctor.photo}" alt="${doctor.name}" loading="lazy" />
           <div>
@@ -159,6 +159,7 @@ const renderDoctors = () => {
     )
     .join("");
   updateWhatsAppLinks();
+  observeReveals();
 };
 
 const updateWhatsAppLinks = () => {
@@ -243,6 +244,29 @@ const initSmoothScroll = () => {
   });
 };
 
+let revealObserver;
+const observeReveals = () => {
+  const elements = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    elements.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+  if (!revealObserver) {
+    revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+  }
+  elements.forEach((el) => revealObserver.observe(el));
+};
+
 const init = () => {
   brandName.textContent = BRAND_NAME;
   renderImplants();
@@ -253,6 +277,7 @@ const init = () => {
   initMobileMenu();
   initPrivacyModal();
   initSmoothScroll();
+  observeReveals();
   cityFilter.addEventListener("change", handleCityChange);
   doctorSearch.addEventListener("input", handleSearch);
   yearSpan.textContent = new Date().getFullYear();
